@@ -1,13 +1,14 @@
 name: Hellow world workflow
 
 on:
-push:
-	branches: 
-		-main
+	push:
+		branches: 
+			-main
 	pull_request:
-	branches:
-		-main
+		branches:
+			-main
 	workflow_dispatch:
+
 
 jobs:
 	hello:
@@ -19,7 +20,7 @@ jobs:
 			shell: bash
 
 	goodbye:
-		run-on: ubuntu-latest
+		runs-on: ubuntu-latest
 		steps: 
 			-name: goodbye
 			run: echo "bye to the first pipeline"
